@@ -17,7 +17,7 @@ Along the way it flags possible **Brady/Giglio material**, **suppression hooks**
 
 ## Why local-first
 
-Criminal discovery is routinely produced under **protective orders that prohibit uploading to any cloud service**, and client confidentiality (Rule 1.6) covers everything. This skill operates **entirely on local files and never transmits discovery anywhere**. That posture is the whole point — it is what lets the tool touch the actual discovery at all, where cloud tools cannot.
+Criminal discovery is routinely produced under **protective orders that prohibit uploading to any cloud service**, and client confidentiality covers everything. This skill operates **entirely on local files and never transmits discovery anywhere**. That posture is the whole point — it is what lets the tool touch the actual discovery at all, where cloud tools cannot.
 
 ## What it is and is not
 

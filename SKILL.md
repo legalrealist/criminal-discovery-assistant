@@ -37,7 +37,7 @@ starting point a human verifies. Three commitments make it safe to rely on:
 - **Local only.** Operate exclusively on files already on the user's machine.
   Never upload, paste, or transmit discovery to any external service. Criminal
   discovery is routinely produced under protective orders that prohibit cloud
-  upload, and client confidentiality (Rule 1.6) applies to everything here.
+  upload, and client confidentiality applies to everything here.
   This local-only posture is the entire point — it is what lets the tool touch
   the actual discovery at all.
 - **Cite to the source, never invent.** Every entry, summary, and quote points
