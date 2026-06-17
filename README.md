@@ -27,16 +27,74 @@ This produces a **first pass for attorney review, not a substitute** for the law
 - **Cite to the source, never invent** — every entry points back to a specific file/Bates/timestamp; gaps are reported as "not found in the production," never filled with plausible-sounding content.
 - **Flag, don't conclude** — issues are surfaced for the attorney, not adjudicated.
 
-## Install
+## Install — step by step
 
-**Claude Code / Claude desktop:** copy the `SKILL.md` (and this folder) into your skills directory, e.g.:
+A "skill" is just a folder containing a `SKILL.md` file, placed where Claude looks for skills. That location is your personal skills directory:
+
+- **macOS / Linux:** `~/.claude/skills/`
+- **Windows:** `%USERPROFILE%\.claude\skills\`
+
+This works for both **Claude Code** (the terminal tool) and the **Claude desktop app** (Cowork) — they read the same directory.
+
+### Option A — Download one file (simplest)
+
+1. Open the [`SKILL.md`](SKILL.md) file in this repo on GitHub.
+2. Click the **Download raw file** button (top-right of the file view) to save `SKILL.md` to your computer.
+3. Create a folder named `criminal-discovery-assistant` inside your skills directory and move `SKILL.md` into it. The final path must be:
+   - macOS/Linux: `~/.claude/skills/criminal-discovery-assistant/SKILL.md`
+   - Windows: `%USERPROFILE%\.claude\skills\criminal-discovery-assistant\SKILL.md`
+
+   On macOS/Linux you can do steps 3 in the terminal:
+   ```bash
+   mkdir -p ~/.claude/skills/criminal-discovery-assistant
+   mv ~/Downloads/SKILL.md ~/.claude/skills/criminal-discovery-assistant/
+   ```
+
+4. **Start a new conversation** in Claude Code or the Claude app so the skill loads.
+
+### Option B — Clone the whole repo (gets the example case too)
+
+Use this if you also want the synthetic example case to try it on.
 
 ```bash
-mkdir -p ~/.claude/skills/criminal-discovery-assistant
-cp SKILL.md ~/.claude/skills/criminal-discovery-assistant/
+# 1. Go to your skills directory (create it if it doesn't exist)
+mkdir -p ~/.claude/skills
+cd ~/.claude/skills
+
+# 2. Clone this repo into a folder named after the skill
+git clone https://github.com/legalrealist/criminal-discovery-assistant.git
+
+# 3. Start a new Claude conversation so the skill loads
 ```
 
-Then just describe the task — e.g. *"Get me up to speed on this CJA case, the discovery is in ~/cases/US-v-Smith"* — and the skill triggers.
+That places `SKILL.md` at `~/.claude/skills/criminal-discovery-assistant/SKILL.md`, which is all that's required — the extra files (README, examples, evals) are ignored by Claude.
+
+### Verify it installed
+
+Confirm the file is in the right place:
+
+```bash
+ls ~/.claude/skills/criminal-discovery-assistant/SKILL.md
+```
+
+Then, in a **new** Claude conversation, ask:
+
+> Do you have the criminal-discovery-assistant skill available?
+
+### Use it
+
+Point Claude at a case folder in plain English — it triggers automatically:
+
+> Get me up to speed on this CJA case — the discovery is in ~/cases/US-v-Smith
+
+To try it on the bundled example (if you used Option B):
+
+> Get me up to speed on this case — the discovery is in ~/.claude/skills/criminal-discovery-assistant/examples/US-v-Doe
+
+### Update later
+
+- **Option A:** re-download `SKILL.md` and replace the old one.
+- **Option B:** `cd ~/.claude/skills/criminal-discovery-assistant && git pull`
 
 ## Try it
 
