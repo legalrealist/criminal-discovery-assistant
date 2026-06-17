@@ -1,0 +1,39 @@
+{
+  "skill_name": "criminal-discovery-assistant",
+  "evals": [
+    {
+      "id": 0,
+      "name": "new-cja-appointment-full-workflow",
+      "prompt": "I just got appointed on a CJA case, United States v. Marcus Doe. The government's first discovery production is in the folder ./US-v-Doe (the indictment is in there too). Get me up to speed on this case: build me a discovery tracker, deal with any recordings, and take a first pass through the discovery telling me what the evidence shows on each charge. Keep everything local.",
+      "expected_output": "An Excel discovery tracker inventorying the produced items; handling of the bodycam recording (transcript or inventory note that transcription tooling is needed); a persistent case-memory markdown doc that breaks the two counts (21 USC 841 distribution; 18 USC 922(g)(1) felon-in-possession) into elements and maps evidence to each; flags for the exculpatory Jane Roe statement, the Fourth Amendment suppression hooks (air-freshener pretext stop / 35-min prolonged detention), and the items referenced but not produced (911 call recording, Officer Reyes bodycam). No fabricated Bates numbers or facts; nothing uploaded.",
+      "files": ["US-v-Doe"],
+      "assertions": [
+        {"text": "Produces an Excel (.xlsx) discovery tracker file in the outputs", "type": "file_exists"},
+        {"text": "Tracker inventories at least 6 of the produced items (arrest report, supplemental report, lab report, witness statement, bodycam, production letter)"},
+        {"text": "Produces a persistent case-memory markdown document"},
+        {"text": "Case memory breaks out BOTH counts: 21 U.S.C. 841 distribution of cocaine base AND 18 U.S.C. 922(g)(1) felon in possession, with their elements"},
+        {"text": "Inventories the bodycam recording (bodycam_BWC-001.m4a) and either transcribes it or notes transcription tooling is needed, rather than ignoring it"},
+        {"text": "Flags the exculpatory Jane Roe statement that someone other than the defendant placed the bag under the seat"},
+        {"text": "Flags a Fourth Amendment / suppression hook (air-freshener pretext stop and/or ~35-minute prolonged roadside detention)"},
+        {"text": "Identifies referenced-but-not-produced items: the 911 call recording and Officer Reyes's body-worn camera"},
+        {"text": "Does not fabricate Bates numbers, holdings, or facts absent from the materials"},
+        {"text": "Operates locally and does not attempt to upload or transmit discovery to any external service"}
+      ]
+    },
+    {
+      "id": 1,
+      "name": "charge-map-and-missing-discovery",
+      "prompt": "Review the discovery in ./US-v-Doe against the indictment. I want a charge-by-charge breakdown of what helps us and what hurts us, plus a list of anything the discovery references that the government hasn't actually produced yet. Note any inconsistencies you spot.",
+      "expected_output": "A charge-by-charge analysis of both counts citing specific files; a list of missing/referenced-but-not-produced items (911 call recording, Officer Reyes bodycam, and reasonably the CI reliability/payment docs and analyst proficiency/calibration logs); identification of the consent inconsistency between Officer Kowalski's report (verbal consent to search) and Officer Reyes's supplemental report (search incident to arrest); and the exculpatory Jane Roe statement.",
+      "files": ["US-v-Doe"],
+      "assertions": [
+        {"text": "Breaks the indictment into both counts and their elements"},
+        {"text": "For each count, states what evidence supports and what undercuts it, citing specific source files"},
+        {"text": "Lists referenced-but-not-produced items including the 911 call recording and Officer Reyes's bodycam"},
+        {"text": "Flags the consent inconsistency: Kowalski reports verbal consent to search while Reyes reports search incident to arrest"},
+        {"text": "Flags the exculpatory Jane Roe statement"},
+        {"text": "Does not fabricate facts, Bates numbers, or legal holdings not supported by the materials"}
+      ]
+    }
+  ]
+}
