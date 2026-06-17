@@ -4,6 +4,10 @@ A [Claude skill](https://docs.claude.com/en/docs/claude-code/skills) that helps 
 
 It is built around a workflow that, in real CJA practice, has saved roughly **100 hours of attorney time on a single large production** — and surfaced "nice to have" work that would otherwise never get done under caseload pressure.
 
+![Walkthrough: install the skill, point Claude at a case folder, and get a discovery tracker, transcripts, a charge-mapped review, and a persistent case-memory document](assets/demo.gif)
+
+*Walkthrough of the workflow on the bundled synthetic example case.*
+
 ## What it does
 
 When you point it at a case folder, it:
