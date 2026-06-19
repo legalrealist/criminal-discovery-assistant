@@ -112,6 +112,11 @@ The example contains **synthetic, fictional** data for demonstration only.
 
 A finished first pass generated from the synthetic [`examples/US-v-Doe`](examples/US-v-Doe) case is committed under [`examples/US-v-Doe/_case-assistant/`](examples/US-v-Doe/_case-assistant) so you can see what the skill produces before running it:
 
+[![Discovery tracker generated from the synthetic example case — Bates ranges, source, type, relevant counts, issue flags, and review status, with exculpatory material and not-produced items highlighted](assets/discovery-tracker.png)](examples/US-v-Doe/_case-assistant/discovery-tracker.xlsx)
+
+*The generated `discovery-tracker.xlsx`, opened. Exculpatory/Brady flags are highlighted; referenced-but-not-produced items are shaded.*
+
+
 - **[discovery-tracker.xlsx](examples/US-v-Doe/_case-assistant/discovery-tracker.xlsx)** — the inventory tracker: 7 rows covering all 5 produced documents plus the body-worn camera file and 2 referenced-but-not-produced items (911 call, second officer's BWC). Sortable/filterable, with Bates ranges, source, type, relevant counts, issue flags, and review status.
 - **[case-memory.md](examples/US-v-Doe/_case-assistant/case-memory.md)** — the persistent working document: both counts broken into elements, evidence mapped per count, flags (Brady/Giglio, suppression hooks, inconsistencies), a missing/not-produced list, next steps, a production log, and a changelog.
 - **[transcripts/bodycam_BWC-001.txt](examples/US-v-Doe/_case-assistant/transcripts/bodycam_BWC-001.txt)** — a timestamped, speaker-labeled draft transcript marked *DRAFT — verify against the recording*, with review notes tying the footage to the prolonged-detention and consent issues.
