@@ -1,0 +1,26 @@
+DRAFT — verify against the recording
+Recording: recordings/bodycam_BWC-001.m4a (Officer D. Kowalski, BWC-001, ~12 min)
+Speaker labels and timestamps are uncertain and must be confirmed by a human before any courtroom use. [inaudible] marks unclear passages.
+
+[00:00:05] OFC. KOWALSKI: (to dispatch) Show me out on a gray sedan, eastbound, one occupant. Tag's partial.
+[00:00:31] OFC. KOWALSKI: (approaching driver window) How you doing tonight? Reason I stopped you, you got that air freshener hanging there blocking your view. Can I see your license and registration?
+[00:00:44] DOE: It's right here. What — that's what you pulled me over for?
+[00:00:49] OFC. KOWALSKI: Where you headed?
+[00:00:52] DOE: Just home. [inaudible]
+[00:01:03] OFC. KOWALSKI: You seem a little nervous. Anything in the car I should know about?
+[00:01:07] DOE: No. Nothing.
+[00:01:12] OFC. KOWALSKI: Sit tight for me.
+[00:01:20] OFC. KOWALSKI: (to dispatch) Can you start me a K-9 unit to this location?
+[00:02:40] OFC. KOWALSKI: (to Doe) Just waiting on another unit, won't be long.
+[00:09:15] OFC. KOWALSKI: (off-camera radio traffic) [inaudible] ...copy, K-9 on scene.
+[00:35:10] OFC. KOWALSKI: K-9's gonna walk around the vehicle, okay? Stay where you are.
+[00:36:02] OFC. KOWALSKI: Dog alerted on the vehicle. You mind if I take a look inside?
+[00:36:08] DOE: I guess. [inaudible] go ahead.
+[00:37:25] OFC. KOWALSKI: (during search) Got a bag here under the passenger seat. (continues) And we got a firearm in the glovebox.
+[00:38:40] OFC. KOWALSKI: Step out for me. Turn around. You're being detained.
+[00:39:05] OFC. KOWALSKI: (to backup) Reyes, can you secure him? I'm gonna photograph this.
+[00:41:18] OFC. KOWALSKI: (to Doe) You're under arrest. We'll talk about it at booking.
+
+[NOTE FOR REVIEW] Internal clock jumps from ~00:02:40 to ~00:35:10 around the K-9 wait — confirm whether this is a recording gap, a clip splice, or an embedded device timestamp. The ~35-minute detention is the central prolonged-detention (Rodriguez) issue.
+[NOTE FOR REVIEW] Consent language at 00:36:02–00:36:08 occurs AFTER the K-9 alert — confirm sequence and exact wording for the consent-voluntariness analysis.
+[NOTE FOR REVIEW] Footage depicts a consent search (Kowalski), which conflicts with Reyes's supplemental report describing a search incident to arrest (USAO-000007).

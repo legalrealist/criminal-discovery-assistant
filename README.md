@@ -108,6 +108,23 @@ A synthetic example case (a two-count federal indictment with planted suppressio
 
 The example contains **synthetic, fictional** data for demonstration only.
 
+## Example output
+
+A finished first pass generated from the synthetic [`examples/US-v-Doe`](examples/US-v-Doe) case is committed under [`examples/US-v-Doe/_case-assistant/`](examples/US-v-Doe/_case-assistant) so you can see what the skill produces before running it:
+
+- **[discovery-tracker.xlsx](examples/US-v-Doe/_case-assistant/discovery-tracker.xlsx)** — the inventory tracker: 7 rows covering all 5 produced documents plus the body-worn camera file and 2 referenced-but-not-produced items (911 call, second officer's BWC). Sortable/filterable, with Bates ranges, source, type, relevant counts, issue flags, and review status.
+- **[case-memory.md](examples/US-v-Doe/_case-assistant/case-memory.md)** — the persistent working document: both counts broken into elements, evidence mapped per count, flags (Brady/Giglio, suppression hooks, inconsistencies), a missing/not-produced list, next steps, a production log, and a changelog.
+- **[transcripts/bodycam_BWC-001.txt](examples/US-v-Doe/_case-assistant/transcripts/bodycam_BWC-001.txt)** — a timestamped, speaker-labeled draft transcript marked *DRAFT — verify against the recording*, with review notes tying the footage to the prolonged-detention and consent issues.
+
+What the first pass surfaces on this case:
+
+- **Exculpatory (Brady):** a witness places the drugs with a *different* man — undercuts both counts.
+- **Suppression hooks:** ~35-minute roadside detention awaiting a K-9 (*Rodriguez*) and a pretextual stop.
+- **Inconsistency:** one officer documents a consent search, the other a search incident to arrest.
+- **Count weakness:** no distribution indicia produced for the § 841 charge.
+
+These outputs are committed for illustration only — they were generated from the synthetic example and are not legal advice.
+
 ## Evals
 
 [`evals/evals.json`](evals/evals.json) holds the test prompts and assertions used to develop the skill (built with the `skill-creator` workflow). In testing, a strong base model already handles much of this task; the skill's measured value is **consistency, persistence (the updating case-memory doc), and the baked-in local-only / cite-to-source / flag-don't-conclude guardrails** rather than a large raw-capability lift.
